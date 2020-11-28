@@ -1,10 +1,13 @@
-FROM node
+# specifies node version number, 14
+FROM node:14
 
 WORKDIR /app
 
 COPY . /app
 
 RUN npm install
+
+COPY . /app
 
 EXPOSE 80
 
